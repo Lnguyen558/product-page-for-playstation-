@@ -1,0 +1,368 @@
+/* reset page to margin 0 and padding 0 */
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+
+
+}
+
+/* reset all image to 100% */
+img
+{
+ max-width: 100%;
+}
+
+/* format container */
+.container
+{
+    width: 100%;
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    
+   
+ 
+
+}
+
+/* format navbar */
+.navbar
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+} 
+
+/* format logo */
+.logo
+{
+    width: 50px;
+   cursor: pointer;
+    /* margin with two value mean top and bottom 30px
+    right and left 0 
+    https://www.w3schools.com/css/css_margin.asp */
+    margin: 30px 0
+}
+
+/* format menu icon*/
+.menu-icon
+{
+    width: 25px;
+    cursor: pointer;
+    /* to make the menu icon disapper on big screen */
+    display: none;
+
+}
+
+/* format the menu options */
+nav
+{
+flex: 1;
+text-align: right;
+}
+
+/* format list */
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+ 
+}
+
+/* format list anchor */
+nav ul a 
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+/* change color of menu option when hovering */
+nav ul a:hover 
+{
+    color: red;
+
+    border-bottom: 3px solid orange;
+    border-top: 1px solid orange;
+}
+
+/* format row */
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin top and bottom 100px, left and right 0 */
+    margin: 100px 0;
+}
+
+/* format col 1 */
+.col-1
+{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+/* format col 1 h2*/
+.col-1 h2
+{
+    font-size: 54px;
+}
+
+/* format col 1 h3*/
+.col-1 h3
+{
+    font-size: 30px;
+    color: #707070;
+    /* font weight 100 mean light
+    https://www.w3schools.com/cssref/pr_font_weight.asp */
+    font-weight: 100;
+    /* margin with three value mean top 20 , right left 0 , 
+    bottom 10 https://www.w3schools.com/css/css_margin.asp*/
+    margin: 20px 0 10px;
+}
+
+/* format col 1 paragraph */
+.col-1 p 
+{
+    font-size: 16px;
+    color: #b7b7b7;
+    /* font weight 100 mean light
+    https://www.w3schools.com/cssref/pr_font_weight.asp */
+    font-weight: 100;
+
+}
+
+/* format col 1 h4 */
+.col-1 h4
+{
+    /* margin with two value mean
+    top and bottom 30px, left and right 0 */
+    margin: 30px 0;
+    font-size: 20px;
+
+}
+
+/* format button */
+button
+{
+    width: 140px;
+    border: 0;
+    /* padding with two values mean top and right 12px
+    left and right 10px */
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    /* use linear-gradient to make 
+    two different color to button from left to right */
+    background: linear-gradient(to left, #612d3c, #ff3527);
+    border-radius: 20px;
+    cursor: pointer;
+    /* to make the arrow appears in 2 second
+    when hovering */
+    transition: width 2s;
+}
+
+/* format button arrow image */
+button img
+{
+/* make arrow shorter */
+width: 30px;
+/*  make arrow disapper before hover*/
+display: none;
+}
+
+/* format button arrow immage apprea when hover */
+button:hover img
+{
+display: block;
+}
+
+/* format button to change width when hover */
+button:hover 
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: green;
+}
+
+/* add vertical line on the left of col 1 */
+.col-1::after 
+{
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position:absolute;
+    left: -40px;
+    top: 8px;
+
+}
+
+/* fomrat col 2 for the controller pic */
+.col-2
+{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* format controller image */
+.controller-image   
+{
+    width: 90%;
+}
+
+/* format color box behind controller image */
+.color-box 
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#ff469f, #ff6062);
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 80%;
+  /* z-index to move the color box behind the controller image */
+  z-index: -1;
+
+  /* use transform to move color box to the right side */
+  transform: translateX(100px);
+  
+}
+
+
+
+/* format add to card div*/
+.add-button
+{
+ text-align: center;
+ cursor: pointer;
+
+}
+
+/* format the add to card image */
+.add-button img 
+{
+    width: 50px;
+    margin-bottom: 4%;
+    
+}
+
+/* fomrat the add to card paragraph */
+.add-button p
+{
+    font-size: 12px;
+    width: 100px;
+    color: white;
+   
+}
+
+/* format the social icons link */
+.social-links img   
+{
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* fomrat the social icon div to center */
+.social-links   
+{
+    text-align: center;
+}
+
+
+/* adjust for smaller screen / mobiel devices */
+@media only screen and (max-width: 700px)
+{
+    
+    /* for smaller screen make the nav ul smaller and
+    move below the business logo */
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#ff54a2, #ff575a);
+        position: absolute;
+        top: 75px;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+    /*format the nav ul li to change to vertically*/ 
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* change the nav ul li a to white color */
+    nav ul li a {
+        color: #fff;
+    }
+
+    /* to make the menu icon appears on small screen*/
+    .menu-icon{
+        display: block;
+    }
+
+    /* make the menu toggle open smoothly */
+    #menuList
+    {
+        overflow: hidden;
+        transition: 1s;
+    }
+
+    /* change the row to adjust on smaller screen */
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    /* change col2  */
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    /* change col 2 controller image  */
+    .col-2 .controller-image{
+        width: 77%;
+    }
+
+    /* change the color box */
+    .color-box{
+        transform: translateX(75px);
+    }
+
+    /* change col 1 */
+     .col-1{
+        flex-basis: 100%;
+
+    } 
+
+    .col-1 h2{
+        color: red;
+        font-size: 35px;
+    }
+
+    .col-1 h3{
+        color: red;
+        font-size: 15px;
+    }
+
+
+}
